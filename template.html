@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{.Title}}</title>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  <title>{{.Title}}</title>
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
-    <div class="navbar">
-		    {{range .MenuOptions}}
-				{{if .SubMenus}}
-				<div class="subnav">
-						<button class="subnavbtn">{{.Title}} <span class="menu-arrow">&#9660</span></button>
-						<div class="subnav-content">
-				    {{range .SubMenus}}
-						    <a href="{{.URL}}">{{.Title}}</a>
-						{{end}}
-						</div>
-				</div>
-				{{else}}
-		    <a href="{{.URL}}">{{.Title}}</a>
-				{{end}}
-				{{end}}
+  <div class="navbar">
+    {{range .MenuOptions -}}
+    {{if .SubMenus -}}
+    <div class="subnav">
+      <button class="subnavbtn">{{.Title}} <span class="menu-arrow">&#9660</span></button>
+      <div class="subnav-content">
+        {{range .SubMenus -}}
+        <a href="{{.URL}}">{{.Title}}</a>
+        {{end -}}
+      </div>
+    </div>
+    {{else -}}
+    <a href="{{.URL}}">{{.Title}}</a>
+    {{end -}}
+    {{end -}}
 		</div>
-    <h1>{{.Title}}</h1>
-    <p>{{.Content}}</p>
+  <h1>{{.Title -}}</h1>
+  <p>{{.Content -}}</p>
 </body>
 </html>
