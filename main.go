@@ -56,7 +56,7 @@ func fillSiteTemplate() PageData {
 		MenuOptions: []MenuItem{
 			{Title: "Home", URL: "/"},
 			{Title: "About", URL: "/about"},
-			{Title: "Services", URL: "#", SubMenus: []MenuItem{
+			{Title: "Services", URL: "/foo", SubMenus: []MenuItem{
 				{Title: "Service 1", URL: "/services/service1"},
 				{Title: "Service 2", URL: "/services/service2"},
 			}},

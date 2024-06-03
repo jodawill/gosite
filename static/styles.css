@@ -1,5 +1,9 @@
- body {
+body {
   background-color: #999;
+}
+
+.menu-arrow {
+  font-size: x-small;
 }
 
  /* The navigation menu */

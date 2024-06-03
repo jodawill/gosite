@@ -9,7 +9,7 @@
 		    {{range .MenuOptions}}
 				{{if .SubMenus}}
 				<div class="subnav">
-						<button class="subnavbtn">{{.Title}} <i class="fa fa-caret-down"></i></button>
+						<button class="subnavbtn">{{.Title}} <span class="menu-arrow">&#9660</span></button>
 						<div class="subnav-content">
 				    {{range .SubMenus}}
 						    <a href="{{.URL}}">{{.Title}}</a>
