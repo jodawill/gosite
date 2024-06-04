@@ -19,14 +19,12 @@ type MenuItem struct {
 }
 
 func main() {
-	// Define routes
 	http.HandleFunc("/", homeHandler)
 	http.HandleFunc("/about", aboutHandler)
 
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	// Start server
 	fmt.Println("Server is listening on port 8080...")
 	http.ListenAndServe(":8080", nil)
 }
